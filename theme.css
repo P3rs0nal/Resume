@@ -1,0 +1,163 @@
+@media only screen and (max-width: 600px) {
+    .center {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .rightColumn {
+        width: 100%;
+        border-left: none;
+    }
+
+    .label {
+        font-size: 14px;
+    }
+
+    .img {
+        height: auto;
+    }
+
+    .footer {
+        font-size: 14px;
+    }
+
+    .headings {
+        font-size: 18px;
+    }
+
+    .backToMain {
+        text-wrap: wrap;
+        font-size: smaller;
+        max-width: 50px;
+        max-height: 50px; 
+    }
+    
+}
+
+body {
+    background-color: #10271e;
+    color: #aaffaa;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+canvas {
+    display: block;
+}
+
+.banner{
+    background-color: #004d26;
+    color: #aaffaa;
+    padding: 5px;
+    text-align: center;
+    font-size: small;
+    margin-bottom: 10px;
+    width: 100vw;
+    position: relative;
+}
+
+.headings {
+    text-align: center;
+    background-color: #004d26;
+    color: white;
+    width: 100vw;
+    padding: 10px;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    object-fit: cover;
+    width: 80%;
+    height: 100%;
+    padding: 15px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
+    max-width: 100%;
+}
+
+.about{
+    color: #aaffaa;
+    padding: 5px;
+    text-align: center;
+    align-self: center;
+    flex:content;
+    flex-direction: column;
+    width: 100%;
+    object-fit: cover;
+    font-size: large;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.rightColumn{
+    display:flex;
+    flex-direction: column;
+    width: 20%;
+    border-left: 2px solid #101c14;
+}
+
+.label {
+    width: 50px;
+    font-weight: bold;
+    color: #aaffaa;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.link, .newLink {
+    padding: 10px;
+    color: #39ff14;
+    transition: color 0.3s;
+}
+
+.link:hover, .newLink:hover {
+    color: #159c59;
+}
+
+.link:active {
+    color: #98fb98;
+}
+
+body.light .newLink {
+    color: #135b1b;
+}
+
+body.light .newLink:hover {
+    color: #0e4014;
+}
+
+.footer {
+    padding: 5px;
+    background-color: #101c14;
+    color: #6b8e23;
+    width: 100vw;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3 ease-in-out;
+}
