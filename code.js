@@ -1,60 +1,166 @@
-let scene, camera, renderer, uniforms;
+(function () {
+  var width,
+    height,
+    largeHeader,
+    canvas,
+    ctx,
+    points,
+    target,
+    animateHeader = true;
 
-function init() {
-  // Scene Setup
-  scene = new THREE.Scene();
-  camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-  camera.position.z = 1;
+  // Main
+  initHeader();
+  initAnimation();
+  addListeners();
 
-  // Renderer
-  renderer = new THREE.WebGLRenderer();
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  document.body.appendChild(renderer.domElement);
+  function initHeader() {
+    width = window.innerWidth;
+    height = window.innerHeight;
+    target = { x: width / 2, y: height / 2 };
+    largeHeader = document.getElementById("large-header");
+    largeHeader.style.height = height + "px";
+    canvas = document.getElementById("demo-canvas");
+    canvas.width = width;
+    canvas.height = height;
+    ctx = canvas.getContext("2d");
 
-  // Shader Uniforms
-  uniforms = {
-    u_time: { value: 1.0 },
-    u_resolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) }
-  };
-
-  // Plane Geometry
-  let geometry = new THREE.PlaneGeometry(2, 2);
-  let material = new THREE.ShaderMaterial({
-    uniforms: uniforms,
-    vertexShader: `
-      void main() {
-        gl_Position = vec4(position, 1.0);
+    // create points
+    points = [];
+    for(var n = 0; n < 5; n++){
+      var p = { x: (Math.random() * width), originX:  (Math.random() * width), y:  (Math.random() * height), originY:  (Math.random() * height)}
+      points.push(p);
+    }
+    // for each point find the 5 closest points
+    for (var i = 0; i < points.length; i++) {
+      var closest = [];
+      var p1 = points[i];
+      for (var j = 0; j < points.length; j++) {
+        var p2 = points[j];
+        if (!(p1 == p2)) {
+          var placed = false;
+          for (var k = 0; k < 5; k++) {
+            if (!placed) {
+              if (closest[k] == undefined) {
+                closest[k] = p2;
+                placed = true;
+              }
+            }
+          }
+          for (var k = 0; k < 5; k++) {
+            if (!placed) {
+              if (getDistance(p1, p2) < getDistance(p1, closest[k])) {
+                closest[k] = p2;
+                placed = true;
+              }
+            }
+          }
+        }
       }
-    `,
-    fragmentShader: `
-      uniform float u_time;
-      uniform vec2 u_resolution;
+      p1.closest = closest;
+    }
 
-      void main() {
-        vec2 st = gl_FragCoord.xy / u_resolution;
-        float color = 0.5 + 0.5 * sin(u_time + st.x * 10.0);
-        gl_FragColor = vec4(vec3(color), 1.0);
+    // assign a circle to each point
+    for (var i in points) {
+      var c = new Circle(
+        points[i],
+        2 + Math.random() * 2, "rgba(255,255,255,0.03)");
+      points[i].circle = c;
+    }
+  }
+
+  // Event handling
+  function addListeners() {
+    window.addEventListener("scroll", scrollCheck);
+    window.addEventListener("resize", resize);
+  }
+
+  function scrollCheck() {
+    if (document.body.scrollTop > height) animateHeader = false;
+    else animateHeader = true;
+  }
+
+  function resize() {
+    width = window.innerWidth;
+    height = window.innerHeight;
+    largeHeader.style.height = height + "px";
+    canvas.width = width;
+    canvas.height = height;
+  }
+
+  // animation
+  function initAnimation() {
+    animate();
+    for (var i in points) {
+      shiftPoint(points[i]);
+    }
+  }
+
+  function animate() {
+    if (animateHeader) {
+      ctx.clearRect(0, 0, width, height);
+      for (var i in points) {
+        points[i].active = 0.05;
+        points[i].circle.active = 0.05;
+        drawLines(points[i]);
+        points[i].circle.draw();
       }
-    `
+    }
+    requestAnimationFrame(animate);
+  }
+
+  function shiftPoint(p) {
+    gsap.to(p, {
+      duration: 1 + Math.random() * 10,
+      x: Math.random() * width,
+      y: Math.random() * height,
+      ease: "sine.in",
+      onComplete: function () {
+          shiftPoint(p);
+      }
   });
+  }
+  // Canvas manipulation
+  function drawLines(p) {
 
-  let plane = new THREE.Mesh(geometry, material);
-  scene.add(plane);
+    if (!p.active) return;
+    const grad=ctx.createLinearGradient(p.x,p.y, p.closest[2].x,p.closest[0].y);
+    grad.addColorStop(0, "white");
+    grad.addColorStop(.7, "blue");
+    grad.addColorStop(1, "white");
+    for (var i in p.closest) {
+      ctx.beginPath();
+      ctx.moveTo(p.x, p.y);
+      ctx.lineTo(p.closest[i].x, p.closest[i].y);
+      ctx.strokeStyle = grad;
+      ctx.stroke();
+    }
+  }
 
-  animate();
-}
+  function Circle(pos, rad, color) {
+    var _this = this;
+    // constructor
+    (function () {
+      _this.pos = pos || null;
+      _this.radius = rad || null;
+      _this.color = color || null;
+    })();
 
-function animate() {
-  uniforms.u_time.value += 0.05;
-  renderer.render(scene, camera);
-  requestAnimationFrame(animate);
-}
+    this.draw = function () {
+      if (!_this.active) return;
+      ctx.beginPath();
+      ctx.arc(_this.pos.x, _this.pos.y, _this.radius, 0, 2 * Math.PI, false);
+      ctx.fillStyle = "rgba(99, 117, 117, 0.58)";
+      ctx.fill();
+    };
 
-// Resize Handling
-window.addEventListener("resize", () => {
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  uniforms.u_resolution.value.set(window.innerWidth, window.innerHeight);
-});
+  }
 
-// Start Animation
-init();
+  // Util
+
+  function getDistance(p1, p2) {
+
+    return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
+
+  }
+
+})();
