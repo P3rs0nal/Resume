@@ -187,7 +187,9 @@ canvas {
     font-size: xx-large;
     font-family: sans-serif;
     height: 96vh;
-    margin-top: 25px;
+    width: 100%;
+    padding-bottom: 25px;
+    /* padding: 10px; */
     /* background-color: red; */
 }
 
