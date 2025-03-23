@@ -37,7 +37,6 @@
     }
     
 }
-/* Header */
 
 .large-header {
     position: relative;
@@ -46,12 +45,10 @@
     overflow: hidden;
     background-size: cover;
     background-position: center center;
-    /* z-index: 1; */
 }
 body {
     background-color: #00000032;
-    color: #aaffaa;
-    transition: background-color 0.3s, color 0.3s;
+    color: white;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -76,6 +73,15 @@ canvas {
     z-index: -1;
 }
 
+.projimg{
+    border-radius: 100%;
+    width: 15%;
+}
+
+.img{
+    width: 20%;
+}
+
 #demo-canvas {
     position: absolute;
     width: 100%;
@@ -91,11 +97,70 @@ canvas {
 }
 
 .headings{
-    position: fixed;
+    position: sticky;
     margin-left: 0;
     top:0;
-    background: rgba(0, 0, 0, 1);
+    background: transparent;
+    transition: background 0.3s ease;
     z-index: 3;
+}
+
+.headings.scrolled{
+    background-color: black;
+}
+
+.timeline {
+    position: relative;
+    padding: 20px;
+    margin-left: 30px;
+    border-left: 2px solid #ddd; /* Vertical line */
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.timeline-item {
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 40px;
+    padding: 20px;
+    width: 100%;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.767);
+    box-shadow: 0px 4px 8px rgba(207, 200, 200, 0.747);
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -8px;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.timeline-content {
+    margin-left: 30px;
+    text-align: left;
+}
+
+.timeline-content h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.timeline-content p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: #ffffff;
+}
+
+.date {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #d4cccc;
 }
 
 .about{
@@ -122,8 +187,6 @@ canvas {
     font-size: xx-large;
     font-family: sans-serif;
     height: 96vh;
-    /* width: 100%; */
-    /* padding-top: 30px; */
     margin-top: 25px;
     /* background-color: red; */
 }
@@ -137,7 +200,7 @@ canvas {
     padding: 5px;
     text-align: center;
     align-self: center;
-    flex:content;
+    flex: content;
     flex-direction: column;
     width: 100%;
     object-fit: cover;
@@ -147,14 +210,15 @@ canvas {
 
 .projects{
     /* background-color: blue; */
+    /* justify-content: center;
+    display: flex; */
+    /* flex-direction: column;
+    align-content: center; */
 }
 
 .box{
     justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    padding: 10%;
+    padding: 5%;
     width: 50%;
     height: 50%;
     margin: 20px;
@@ -164,10 +228,8 @@ canvas {
 .titleAndTextCol{
     display: flex;
     flex-direction: column;
-}
-
-.img{
-    width: 10%;
+    justify-content: center;
+    /* background-color: orange; */
 }
 
 .experience{
@@ -180,15 +242,16 @@ canvas {
     background-color: green;
 }
 
-.experience-container
+.experience-container{
+
+}
 
 .container{
-    justify-content: center;
-    align-items: center;
+    flex: content;
     display: flex;
     flex-direction: column;
-    position: relative;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     padding-top: 10px;
 }
@@ -208,11 +271,10 @@ a:visited{
 }
 
 .footer {
-    padding: 5px;
-    background-color: #101c14;
-    color: #6b8e23;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.548);
     width: 100vw;
-    text-align: center;
+    text-align:center;
     bottom: 0;
     left: 0;
 }
