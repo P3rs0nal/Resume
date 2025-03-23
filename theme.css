@@ -169,7 +169,8 @@ canvas {
     overflow-wrap: break-word;
     text-align: left;
     color: black;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.906);
+    position: relative;
 }
 
 .center{
@@ -182,7 +183,7 @@ canvas {
     width: 100%;
     padding-bottom: 25px;
     /* padding: 10px; */
-    /* background-color: red; */
+    background-color: red;
 }
 
 .center-spacing{
