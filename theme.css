@@ -54,6 +54,13 @@ body {
     width: 100%;
     margin: 0;
     overflow-x: hidden;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+}
+
+h1, h2, h3{
+    font-weight: 700;
+    letter-spacing: -.8px;
 }
 
 #large-header{
@@ -73,9 +80,20 @@ canvas {
     z-index: -1;
 }
 
+.left{
+    /* border-right: 2px solid #ddd; */
+    /* background-color: red; */
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 20px; */
+    padding-left: 15px;
+}
+
 .projimg{
-    border-radius: 100%;
-    width: 15%;
+    max-width: 100%;
+    max-height: auto;
 }
 
 .img{
@@ -94,6 +112,11 @@ canvas {
     color: white;
     width: 100vw;
     padding: 10px;
+}
+
+.headings-below{
+    width: fit-content;
+    /* background-color: purple; */
 }
 
 .headings{
@@ -168,9 +191,24 @@ canvas {
     word-wrap: break-word;
     overflow-wrap: break-word;
     text-align: left;
-    color: black;
-    background-color: rgba(255, 255, 255, 0.906);
-    position: relative;
+    margin-bottom: 40px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.767);
+    box-shadow: 0px 4px 8px rgba(207, 200, 200, 0.747);
+}
+
+.center-box{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: auto;
+    color: white;
+    font-size: xx-large;
+    font-family: sans-serif;
+    /* background-color: orange; */
 }
 
 .center{
@@ -182,8 +220,8 @@ canvas {
     height: 96vh;
     width: 100%;
     padding-bottom: 25px;
-    /* padding: 10px; */
-    /* background-color: red; */
+    display: flex;
+    /* background-color: blue; */
 }
 
 .center-spacing{
@@ -200,15 +238,8 @@ canvas {
     width: 100%;
     object-fit: cover;
     font-size: large;
+    padding-bottom: 40px;
     /* background-color: orange; */
-}
-
-.projects{
-    /* background-color: blue; */
-    /* justify-content: center;
-    display: flex; */
-    /* flex-direction: column;
-    align-content: center; */
 }
 
 .box{
@@ -227,20 +258,6 @@ canvas {
     /* background-color: orange; */
 }
 
-.experience{
-    width:95%;
-    background-color: red;
-}
-
-.experience-line{
-    width:5%;
-    background-color: green;
-}
-
-.experience-container{
-
-}
-
 .container{
     flex: content;
     display: flex;
@@ -255,6 +272,12 @@ canvas {
     font-family: sans-serif;
     text-decoration: none;
     color: white;
+}
+
+.new-link{
+    font-family: sans-serif;
+    color: white;
+    text-decoration:underline;
 }
 
 a:visited{
