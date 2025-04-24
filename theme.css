@@ -159,11 +159,12 @@ canvas {
 .timeline {
     position: relative;
     padding: 20px;
-    margin-left: 30px;
-    border-left: 2px solid #ddd; /* Vertical line */
-    max-width: 600px;
-    margin-top: 20px;
+    margin: 40px auto;
+    border-left: 2px solid #ddd;
+    max-width: 700px;
+    width: 100%;
 }
+
 
 .timeline-item {
     align-items: flex-start;
@@ -189,6 +190,16 @@ canvas {
 .timeline-content {
     margin-left: 30px;
     text-align: left;
+}
+
+.timeline-content ul {
+    padding-left: 25px;
+    margin-top: 10px;
+}
+
+.timeline-content li {
+    margin-bottom: 6px;
+    line-height: 1.4;
 }
 
 .timeline-content h3 {
