@@ -188,13 +188,34 @@
     
     </div>
         
-    <div class="footer">
-        <h1>Contact me</h1>
-        <p>Email: <a class="link" href="mailto:eneazguro02@gmail.com">eneazguro02@gmail.com</a></p>
-        <p>Phone: <a class="link" href="tel:+15188339686">(518) - 833 - 9686</a></p>
-    </div>
+   <footer class="footer">
+        <h2>Let’s Connect</h2>
+        <p>Interested in collaborating or hiring? Feel free to reach out.</p>
+        <div style="margin-top: 10px;">
+            <a class="link" href="mailto:eneazguro02@gmail.com">
+                <img src="gmail.png" alt="Email" height="20" style="vertical-align: middle;" /> eneazguro02@gmail.com
+            </a>
+            <br>
+            <a class="link" href="tel:+15188339686">
+                <img src="phone.png" alt="Phone" height="20" style="vertical-align: middle;" /> (518) 833-9686
+            </a>
+            <br>
+            <a class="link" target="_blank" href="https://www.linkedin.com/in/enea-zguro/">
+                <img src="linkedin.png" alt="LinkedIn" height="20" style="vertical-align: middle;" /> LinkedIn
+            </a>
+        </div>
+        <p style="margin-top: 20px; font-size: 0.9em; color: #aaa;">© 2025 Enea Zguro. All rights reserved.</p>
+    </footer>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="code.js"></script>
+    <script>
+        gsap.from(".box", {
+            opacity: 0,
+            y: 30,
+            stagger: 0.1,
+            duration: 0.6
+        });
+    </script>
 </body>
 </html>
