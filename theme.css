@@ -2,6 +2,37 @@
     .center {
         width: 100%;
         padding: 10px;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .left, .center-box{
+        width: 100%;
+    }
+
+    .center-box {
+        text-align: center;
+    }
+
+    .profile-pic {
+        max-width: 140px;
+        margin: 0 auto;
+    }
+
+    .box {
+        width: 100%;
+        margin: 10px 0;
+        padding: 15px;
+        flex-direction: column;
+    }
+    .box .img {
+        width: 50%;
+        margin-bottom: 10px;
+    }
+    
+    .titleAndTextCol {
+        align-items: flex-start;
     }
 
     .container {
@@ -28,6 +59,11 @@
 
     .headings {
         font-size: 18px;
+    }
+
+    .headings-below {
+        position: relative;
+        justify-content: center;
     }
 
     .backToMain {
