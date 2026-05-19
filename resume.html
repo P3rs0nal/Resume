@@ -3,201 +3,294 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enea Zguro - Resume</title>
+    <title>Enea Zguro — Resume</title>
     <link rel="stylesheet" href="resume.css">
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#000000c4">
-    <link rel="icon" type="image/png" href="favicon.ico">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <a href="index.html" class="back-button">Back to Home</a>
-    <div class="resume-container">
-        <header>
-            <h1>Enea Zguro</h1>
-            <p>eneazguro02@gmail.com • (518) 833-9686 • 
-                <a href="https://www.linkedin.com/in/enea-zguro/" target="_blank">LinkedIn</a> • 
-                <a href="https://github.com/P3rs0nal" target="_blank">GitHub</a>
-            </p>
-        </header>
 
-        <section class="education">
-            <h2>EDUCATION</h2>
-            <p><strong>Suny University at Albany, Albany, NY</strong><br>
-            <em>May 2025</em><br>
-            Bachelor of Science, Computer Science & Mathematics - GPA: 3.8<br>
-            Minors in Business & Informatics
-            </p>
-        </section>
+    <div class="resume-page">
+        <div class="resume-back">
+            <a href="index.html" class="back-btn">&larr; Back to Portfolio</a>
+        </div>
 
-        <section class="experience">
-            <h2>PROFESSIONAL EXPERIENCE</h2>
+        <div class="resume-container">
 
-            <div class="job">
-                <h3>VEPA Auto-Care, Albany, NY</h3>
-                <p><strong>Co-Owner</strong> (September 2025 – Current)</p>
-                <ul>
-                    <li>Manage full daily operations of the shop, including staffing, workflow, and customer service.</li>
-                    <li>Lead long-term planning initiatives, including business remodeling, expansions, and exit strategies.</li>
-                    <li>Negotiate with banks for loan and partnership opportunities to expand and offer financing to customers.</li>
-                    <li>Oversee VEPA’s online presence, including the design and deployment of a modern, responsive website.</li>
-                    <li>Implement and maintain cloud-based inventory systems to streamline listings, inquiries, and updates.</li>
-                </ul>
-                <p><strong>Manager</strong> (March 2022 – September 2025)</p>
-                <ul>
-                    <li>Implemented customer-centric upsell strategies, driving a 40% increase in monthly revenue.</li>
-                    <li>Managed end-to-end inventory control: tracked 200+ vehicle parts and reduced stockouts by 25%.</li>
-                    <li>Created and managed social media campaigns that boosted online engagement by 40%.</li>
-                    <li>Built and deployed VEPA Auto-Care’s responsive inventory platform with React + Firebase Firestore.</li>
-                </ul>
+            <!-- Header -->
+            <header class="resume-header">
+                <div class="resume-name-block">
+                    <h1>Enea Zguro</h1>
+                    <p class="resume-headline">
+                        Software Engineer &mdash; CS &amp; Mathematics, SUNY Albany
+                    </p>
+                </div>
+
+                <div class="resume-contact">
+                    <a href="mailto:eneazguro02@gmail.com">eneazguro02@gmail.com</a>
+                    <a href="tel:+15188339686">(518) 833-9686</a>
+                    <a href="https://www.linkedin.com/in/enea-zguro/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/P3rs0nal" target="_blank">GitHub</a>
+
+                    <a href="Enea_Zguro_Resume.pdf"
+                    download
+                    class="resume-download-btn">
+                    Download Resume
+                    </a>
+                </div>
+            </header>
+
+           <!-- Education -->
+<section class="r-section">
+    <h2 class="r-section-title">Education</h2>
+    <div class="r-entry">
+        <div class="r-entry-header">
+            <div>
+                <h3>SUNY University at Albany <span class="r-location">Albany, NY</span></h3>
+                <p class="r-degree">Bachelor of Science, Computer Science &amp; Mathematics &mdash; GPA: 3.8/4.0</p>
+                <p class="r-minor">Minors in Business &amp; Informatics</p>
             </div>
-
-            <div class="job">
-                <h3>NYS Office of General Services Procurement Services, Albany, NY</h3>
-                <p><strong>Student Intern</strong> (September 2024 – September 2025)</p>
-                <ul>
-                    <li>Designed and deployed automated Excel workbooks (VBA macros), cutting manual entry time by 55%.</li>
-                    <li>Integrated macros into workflows for multiple divisions, reducing quarterly reporting errors by 30%.</li>
-                    <li>Analyzed procurement processes and implemented improvements that streamlined contract tracking.</li>
-                    <li>Assisted in preparing and reviewing contracts with legal, finance, and vendor teams.</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <h3>SUNY Albany – BITM215, Albany, NY</h3>
-                <p><strong>Teaching Assistant</strong> (January 2023 – May 2025)</p>
-                <ul>
-                    <li>Led weekly lab sessions on advanced Excel functions (pivot tables, VLOOKUP, Power Query).</li>
-                    <li>Translated IT/IS concepts (CRM, SCM, SQL queries) into actionable exercises.</li>
-                    <li>Provided one-on-one support for data visualization and e-business/security principles.</li>
-                    <li>Proctored and graded exams; collaborated with faculty on curriculum improvements.</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <h3>Shogun Sushi, Delmar, NY</h3>
-                <p><strong>Server & Bartender</strong> (August 2022 – May 2023)</p>
-                <ul>
-                    <li>Delivered high-quality service in a fast-paced restaurant while managing bar responsibilities.</li>
-                    <li>Processed POS transactions for up to 8 tables simultaneously with accuracy and speed.</li>
-                    <li>Prepared and served cocktails and sake, upselling featured drinks to boost revenue by 15%.</li>
-                    <li>Collaborated with kitchen staff to manage dietary restrictions and special requests.</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <h3>Emack & Bolios, Albany, NY</h3>
-                <p><strong>Shift Manager</strong> (June 2019 – September 2024)</p>
-                <ul>
-                    <li>Trained and supervised 10+ staff, reducing order errors by 20%.</li>
-                    <li>Conducted weekly inventory audits to minimize waste and maintain stock.</li>
-                    <li>Handled cash reconciliation and implemented a POS system improving transaction accuracy.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="projects">
-            <h2>PROJECTS</h2>
-
-            <div class="project">
-                <h3>Ora – Personal AI Tech Consultant</h3>
-                <p><strong>May 2025</strong></p>
-                <ul>
-                    <li>Developed a cross-platform AI assistant for Google Meet using Whisper and GPT.</li>
-                    <li>Integrated user authentication, transcript logging, and Chrome extension deployment.</li>
-                    <li>Awarded “Best Project” out of 21 entries for innovation and real-world impact.</li>
-                </ul>
-            </div>
-
-            <div class="project">
-                <h3>Math AI Tutor</h3>
-                <p><strong>February 2025</strong></p>
-                <ul>
-                    <li>Built an AI-driven math tutoring web app with Spring Boot, Maven, Firebase, and vanilla JavaScript.</li>
-                    <li>Supported interactive problem solving with Postman testing.</li>
-                </ul>
-            </div>
-
-            <div class="project">
-                <h3>Excel Data Collection & Automation</h3>
-                <p><strong>September 2024</strong></p>
-                <ul>
-                    <li>Automated multi-workbook reports using VBA macros, reducing reporting from 2 hours/day to 5 minutes.</li>
-                </ul>
-            </div>
-
-            <div class="project">
-                <h3>Virtual Processor</h3>
-                <p><strong>May 2024</strong></p>
-                <ul>
-                    <li>Simulated a simplified CPU architecture in Java with OOD and instruction cycle emulation.</li>
-                </ul>
-            </div>
-
-            <div class="project">
-                <h3>Professor Pursuit (Endless Runner)</h3>
-                <p><strong>May 2024</strong></p>
-                <ul>
-                    <li>Built a 3D Unity endless runner for SUNY Albany Hackathon with procedural generation and collision detection.</li>
-                </ul>
-            </div>
-
-            <div class="project">
-                <h3>VEPA AutoCare Inventory Website</h3>
-                <p><strong>May 2024</strong></p>
-                <ul>
-                    <li>Created a responsive Firebase-integrated inventory system with admin panel and live filtering.</li>
-                </ul>
-            </div>
-
-            <div class="project">
-                <h3>Travel Buddy</h3>
-                <p><strong>May 2024</strong></p>
-                <ul>
-                    <li>Developed a React + C# + MongoDB travel planner with destination search, saving, and rating features.</li>
-                </ul>
-            </div>
-
-            <div class="project">
-                <h3>AWK Compiler & Interpreter</h3>
-                <p><strong>December 2023</strong></p>
-                <ul>
-                    <li>Implemented lexical analysis, parsing, AST construction, and real-time interpretation in Java.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="campus-involvement">
-            <h2>CAMPUS INVOLVEMENT</h2>
-
-            <div class="project">
-                <h3>IEEE Student Chapter – SUNY Albany</h3>
-                <p><strong>Personal Portfolio Website Workshop</strong> (May 2025)</p>
-                <ul>
-                    <li>Delivered a workshop to 50+ attendees on HTML/CSS/JS fundamentals and hosting (GitHub Pages, Firebase).</li>
-                    <li>Covered layout best practices and professional branding for personal websites.</li>
-                </ul>
-            </div>
-
-            <div class="project">
-                <h3>Albany Boxing Club – SUNY Albany</h3>
-                <p><strong>Lead Coach & Fitness Instructor</strong> (September 2024 – May 2025)</p>
-                <ul>
-                    <li>Led 4 weekly training sessions for a 200+ member club, teaching boxing fundamentals and conditioning.</li>
-                    <li>Developed individualized fitness plans and group workouts to improve strength and agility.</li>
-                    <li>Coordinated coaches and volunteers to maintain safe and structured practices.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="skills">
-            <h2>SKILLS</h2>
-            <p><strong>Programming languages:</strong> Java, JavaScript, Python, SQL, CSS, C & C#, HTML, VBA, Object Scripts</p>
-            <p><strong>Software / Frameworks:</strong> Microsoft Office, Excel, Unity, Eclipse, GitHub, VS Code, Maven, Postman</p>
-            <p><strong>Databases:</strong> Firebase Firestore, MongoDB, PostgreSQL, MySQL</p>
-            <p><strong>Languages:</strong> English, Albanian</p>
-            <p><strong>Certifications:</strong> NYS Vehicle Inspection</p>
-        </section>
+            <span class="r-date">May 2025</span>
+        </div>
     </div>
+</section>
+
+<!-- Professional Experience -->
+<section class="r-section">
+    <h2 class="r-section-title">Professional Experience</h2>
+
+    <div class="r-entry">
+        <div class="r-entry-header">
+            <div>
+                <h3>VEPA Auto-Care <span class="r-location">Albany, NY</span></h3>
+                <span class="r-role">Co-Owner</span>
+                <span class="r-date-inline">September 2025 &mdash; Current</span>
+            </div>
+            <span class="r-date r-date-desktop">Sept 2025 &mdash; Current</span>
+        </div>
+        <ul>
+            <li>Manage full daily operations of the shop, including staffing, workflow and customer service.</li>
+            <li>Lead long-term planning initiatives, including business remodeling, expansions and exit strategies.</li>
+            <li>Negotiate with banks for loan and partnership opportunities to expand and offer financing to customers.</li>
+            <li>Oversee VEPA’s online presence, including the design and deployment of a modern, responsive website.</li>
+            <li>Implement and maintain cloud-based inventory systems to streamline listings, inquiries and administrative updates.</li>
+        </ul>
+
+        <div class="r-role-block">
+            <div class="r-role-subheader">
+                <span class="r-role">Manager</span>
+                <span class="r-date-inline">2022 &mdash; 2025</span>
+            </div>
+            <ul>
+                <li>Implemented customer‐centric upselling strategies (maintenance packages, service add-ons), driving a 40% increase in monthly revenue.</li>
+                <li>Built and deployed VEPA Auto-Care’s responsive online inventory platform implementing real-time filtering, dynamic listing cards, and Google Maps integration for dealership locations.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="r-entry">
+        <div class="r-entry-header">
+            <div>
+                <h3>NYS Office of General Services &mdash; Procurement Services <span class="r-location">Albany, NY</span></h3>
+                <span class="r-role">Student Intern</span>
+            </div>
+            <span class="r-date">2024 &mdash; 2025</span>
+        </div>
+        <ul>
+            <li>Designed and deployed automated Excel workbooks (VBA macros) to collect and consolidate procurement data, cutting manual data‐entry time by 55% and improving reporting accuracy.</li>
+            <li>Integrated macros into daily workflows for multiple divisions, enabling real‐time status updates and reducing errors in quarterly reports by 30%.</li>
+            <li>Analyzed existing procurement processes and recommended/implemented process improvements that streamlined contract tracking and yielded faster turnaround on vendor onboarding.</li>
+            <li>Assisted in preparing and reviewing contracts by coordinating with legal, finance, and vendor teams to ensure compliance and timely execution.</li>
+        </ul>
+    </div>
+
+    <div class="r-entry">
+        <div class="r-entry-header">
+            <div>
+                <h3>SUNY Albany &mdash; BITM215 <span class="r-location">Albany, NY</span></h3>
+                <span class="r-role">Teaching Assistant</span>
+            </div>
+            <span class="r-date">2023 &mdash; 2025</span>
+        </div>
+        <ul>
+            <li>Lead weekly lab sessions on advanced Excel functions (pivot tables, VLOOKUP, Power Query) to help 100+ students solve real world business data analysis problems.</li>
+            <li>Translate complex IT/IS concepts (CRM, SCM, data trends, SQL queries) into actionable exercises, resulting in a 33% average improvement in student assessment scores from previous years.</li>
+            <li>Provide one-on-one support for data visualization projects, teaching core e-business and information security principles to nontechnical students.</li>
+            <li>Proctor and grade exams; collaborate with faculty to refine curriculum and identify areas where supplemental instruction is needed.</li>
+        </ul>
+    </div>
+
+    <div class="r-entry">
+        <div class="r-entry-header">
+            <div>
+                <h3>Shogun Sushi <span class="r-location">Delmar, NY</span></h3>
+                <span class="r-role">Server &amp; Bartender</span>
+            </div>
+            <span class="r-date">2022 &mdash; 2023</span>
+        </div>
+        <ul>
+            <li>Delivered high-quality service to diners in a fast-paced sushi restaurant, balancing front-of-house duties with bar responsibilities during peak dinner shifts.</li>
+            <li>Managed POS transactions, processed payments, and maintained accurate tabs for up to 8 tables simultaneously, ensuring timely order delivery and check accuracy.</li>
+        </ul>
+    </div>
+
+    <div class="r-entry">
+        <div class="r-entry-header">
+            <div>
+                <h3>Emack &amp; Bolio's <span class="r-location">Albany, NY</span></h3>
+                <span class="r-role">Shift Manager</span>
+            </div>
+            <span class="r-date">2019 &mdash; 2024</span>
+        </div>
+        <ul>
+            <li>Trained and supervised 10+ frontline staff on service standards, managed daily operations and improved customer satisfaction ratings.</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Projects -->
+<section class="r-section">
+    <h2 class="r-section-title">Projects</h2>
+
+    <div class="r-entry">
+        <div class="r-entry-header">
+            <div>
+                <h3>Ora &mdash; Personal AI Tech Consultant <span class="r-badge">Best Project</span></h3>
+            </div>
+            <span class="r-date">May 2025</span>
+        </div>
+        <ul>
+            <li>Developed a cross-platform AI assistant that joins Google Meet calls, listens and responds in real time using Whisper and GPT, and stores conversation transcripts in Firebase.</li>
+            <li>Features include user auth, Chrome extension integration and transcript syncing.</li>
+            <li>Awarded “Best Project” out of 21 class entries, recognizing excellence in innovation, implementation, and real-world impact.</li>
+        </ul>
+    </div>
+
+    <div class="r-entry">
+        <div class="r-entry-header">
+            <h3>Math AI Tutor</h3>
+            <span class="r-date">February 2025</span>
+        </div>
+        <ul>
+            <li>Developed an AI-driven math tutoring web app using Spring Boot, Maven, Firebase, Postman, and vanilla JavaScript for interactive problem solving.</li>
+        </ul>
+    </div>
+
+    <div class="r-entry">
+        <div class="r-entry-header">
+            <h3>Excel Data Collection &amp; Automation</h3>
+            <span class="r-date">September 2024</span>
+        </div>
+        <ul>
+            <li>Automated data aggregation workflows by authoring VBA macros across multiple linked workbooks, converting manual report generation into an automated process.</li>
+        </ul>
+    </div>
+
+    <div class="r-entry">
+        <div class="r-entry-header">
+            <h3>Virtual Processor</h3>
+            <span class="r-date">May 2024</span>
+        </div>
+        <ul>
+            <li>Constructed a virtual processor using Java in Eclipse. The system simulates a simplified CPU architecture and instruction set while reinforcing object-oriented design and instruction cycle emulation.</li>
+        </ul>
+    </div>
+
+    <div class="r-entry">
+        <div class="r-entry-header">
+            <h3>Professor Pursuit (Endless Runner)</h3>
+            <span class="r-date">May 2024</span>
+        </div>
+        <ul>
+            <li>Engineered a 3D endless runner game in Unity (C#) with procedural environment generation, character animations, and collision detection.</li>
+        </ul>
+    </div>
+
+    <div class="r-entry">
+        <div class="r-entry-header">
+            <h3>Travel Buddy</h3>
+            <span class="r-date">May 2024</span>
+        </div>
+        <ul>
+            <li>Created a full-stack travel planning web app with React, C#, and MongoDB allowing users to search, save, and rate destinations.</li>
+        </ul>
+    </div>
+
+    <div class="r-entry">
+        <div class="r-entry-header">
+            <h3>AWK Compiler &amp; Interpreter</h3>
+            <span class="r-date">December 2023</span>
+        </div>
+        <ul>
+            <li>Constructed an AWK compiler/interpreter using Java through Eclipse with lexical analysis, parsing techniques, AST construction and real-time instruction interpretation.</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Campus Involvement -->
+<section class="r-section">
+    <h2 class="r-section-title">Campus Involvement</h2>
+
+    <div class="r-entry">
+        <div class="r-entry-header">
+            <div>
+                <h3>IEEE Student Chapter &mdash; SUNY Albany</h3>
+                <span class="r-role">Personal Portfolio Design Presenter</span>
+            </div>
+            <span class="r-date">May 2025</span>
+        </div>
+        <ul>
+            <li>Delivered a workshop to 50+ attendees covering HTML/CSS/JavaScript fundamentals, hosting options (GitHub Pages, Firebase Hosting), and professional branding best practices.</li>
+        </ul>
+    </div>
+
+    <div class="r-entry">
+        <div class="r-entry-header">
+            <div>
+                <h3>Albany Boxing Club &mdash; SUNY Albany</h3>
+                <span class="r-role">Lead Coach &amp; Fitness Instructor</span>
+            </div>
+            <span class="r-date">2024 &mdash; 2025</span>
+        </div>
+        <ul>
+            <li>Designed and led weekly training sessions 4 times a week for a 200+ member club, teaching boxing fundamentals, conditioning drills, and proper technique.</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Skills -->
+<section class="r-section">
+    <h2 class="r-section-title">Skills</h2>
+
+    <div class="r-skills">
+        <div class="r-skill-row">
+            <span class="r-skill-label">Programming Languages</span>
+            <span class="r-skill-val">Java, JavaScript, Python, SQL, CSS, C &amp; C#, HTML, VBA, Object Scripts</span>
+        </div>
+
+        <div class="r-skill-row">
+            <span class="r-skill-label">Software / Frameworks</span>
+            <span class="r-skill-val">Microsoft Office, Excel, Unity, Eclipse, VBA Editor, GitHub, VS Code, Maven, Postman</span>
+        </div>
+
+        <div class="r-skill-row">
+            <span class="r-skill-label">Databases</span>
+            <span class="r-skill-val">Firebase Firestore, MongoDB, PostgreSQL, MySQL</span>
+        </div>
+
+        <div class="r-skill-row">
+            <span class="r-skill-label">Languages</span>
+            <span class="r-skill-val">English, Albanian</span>
+        </div>
+
+        <div class="r-skill-row">
+            <span class="r-skill-label">Certifications</span>
+            <span class="r-skill-val">NYS Vehicle Inspection, NASM CPT</span>
+        </div>
+    </div>
+</section>
+
+        </div>
+    </div>
+
 </body>
 </html>

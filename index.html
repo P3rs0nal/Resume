@@ -3,489 +3,382 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Enea Zguro Resume</title>
+    <title>Enea Zguro — Portfolio</title>
     <link rel="stylesheet" href="theme.css" />
     <link rel="manifest" href="manifest.json" />
-    <meta name="theme-color" content="#000000c4" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <meta name="theme-color" content="#04070d" />
     <link rel="icon" type="image/png" href="favicon.ico" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
-    <a id="top"></a>
-    <div id="large-header" class="large-header">
+
+    <!-- Canvas background -->
+    <div id="large-header">
         <canvas id="demo-canvas"></canvas>
     </div>
 
-    <div id="headings" class="headings">
-        <a class="link" href="#projects-head">PROJECTS</a>
-        <a class="link" href="#experience">EXPERIENCE</a>
-        <a class="link" href="resume.html">RESUME</a>
-    </div>
-
-    <div class="center">
-        <div class="left">
-            <img
-              class="profile-pic center-spacing"
-              src="LIPFP.png"
-              alt="Profile Picture"
-            />
+    <!-- Navigation -->
+    <nav id="main-nav">
+        <div class="nav-inner">
+            <a href="#top" class="nav-logo">EZ<span class="accent">.</span></a>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects-head" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="resume.html" class="nav-link">Resume</a>
+            </div>
         </div>
-        <div class="center-box">
-            <h1 class="center-spacing">Enea Zguro</h1>
-            <p class="center-spacing" style="font-size: large">
-              BS Computer Science &amp; Mathematics
+    </nav>
+
+    <a id="top"></a>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-label">Software Engineer &amp; Builder</span>
+            <h1 class="hero-name">Enea<br>Zguro</h1>
+            <p class="hero-sub">
+                BS Computer Science &amp; Mathematics — SUNY Albany<br>
+                Co-Owner at VEPA Auto-Care. Builder of things that work.
             </p>
-            <p class="center-spacing" style="font-size: large">
-              Minor in Business &amp; Informatics
-            </p>
-
-            <div class="headings-below">
-                <a
-                  target="_blank"
-                  class="link"
-                  href="https://github.com/P3rs0nal"
-                >
-                  <img src="git.png" height="40" width="40" />
-                </a>
-                <a
-                  target="_blank"
-                  class="link"
-                  href="https://www.linkedin.com/in/enea-zguro/"
-                >
-                  <img src="linkedin.png" height="40" width="40" />
-                </a>
-                <a class="link" href="mailto:eneazguro02@gmail.com">
-                  <img src="gmail.png" height="40" width="40" />
-                </a>
+            <div class="hero-actions">
+                <a href="#projects-head" class="btn btn-primary">View Projects</a>
+                <a href="resume.html" class="btn btn-ghost">Resume</a>
+            </div>
+            <div class="hero-social">
+                <a href="https://github.com/P3rs0nal" target="_blank" class="social-link">GitHub</a>
+                <a href="https://www.linkedin.com/in/enea-zguro/" target="_blank" class="social-link">LinkedIn</a>
+                <a href="mailto:eneazguro02@gmail.com" class="social-link">Email</a>
             </div>
         </div>
-    </div>
+        <div class="hero-scroll-hint">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
 
-    <div class="about">
-        <h2>About me</h2>
-        <p>
-          I’m Enea Zguro, a CS &amp; Math graduate from SUNY Albany. I code fullstack software, co-own an auto shop business and coach
-          boxing on the side. Interested in collaborating? Feel free to reach out!
-        </p>
-    </div>
-
-    <div id="projects-head" class="projects-head">
-        <h1>Projects</h1>
-    </div>
-
-    <div class="projects">
-        <div class="container">
-            <!-- Ora -->
-            <div class="box">
-                <img class="img" src="ORA1.png" />
-                <div class="titleAndTextCol">
-                    <h2>
-                      <a
-                        target="_blank"
-                        class="new-link"
-                        href="https://icsi499-1.onrender.com/dashboard.html"
-                      >
-                        Ora – Personal AI Tech Consultant
-                      </a>
-                    </h2>
-                    <p>
-                      Developed a cross-platform AI assistant that joins Google Meet
-                      calls, listens and responds in real time using Whisper and GPT,
-                      and stores conversation transcripts in Firebase. Features include
-                      user authentication, Chrome extension integration, and transcript
-                      syncing (May 2025). Awarded “Best Project” out of 21 class entries
-                      for excellence in innovation and real-world impact.
-                    </p>
-                </div>
+    <!-- About -->
+    <section id="about" class="section">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-label"></span>
+                <h2 class="section-title">About</h2>
             </div>
-
-            <!-- Math AI Tutor -->
-            <div class="box">
-                <img class="img" src="ai.png" />
-                <div class="titleAndTextCol">
-                    <h2>
-                      <a
-                        target="_blank"
-                        class="new-link"
-                        href="https://github.com/P3rs0nal"
-                      >
-                        Math AI Tutor
-                      </a>
-                    </h2>
-                    <p>
-                      Constructed a math-focused AI tutor using Firebase, Postman,
-                      HTML/CSS/JS, and Spring Boot (Feb 2025). Integrated interactive
-                      problem-solving features and real-time feedback.
-                    </p>
+            <div class="about-grid fade-up">
+                <div class="about-text">
+                    <p>I'm Enea Zguro, a CS &amp; Math graduate from SUNY Albany with a 3.8 GPA. I build full-stack software, co-own an auto shop, and coach boxing on the side.</p>
+                    <p>My work spans government procurement automation, AI-powered tools, inventory platforms, and game development. I move fast across the stack and focus on outcomes that matter.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-num">3.8</span>
+                            <span class="stat-label">GPA</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num">8+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num">4+</span>
+                            <span class="stat-label">Years Exp.</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            <!-- Excel Data Collection & Automation -->
-            <div class="box">
-                <img class="img" src="excel.png" />
-                <div class="titleAndTextCol">
-                    <h2>
-                      <a
-                        target="_blank"
-                        class="new-link"
-                        href="https://github.com/P3rs0nal/Excel-Table-Automation"
-                      >
-                        Excel Data Collection &amp; Automation
-                      </a>
-                    </h2>
-                    <p>
-                      Automated data aggregation workflows by authoring VBA macros
-                      across multiple linked workbooks—converted a 2-hour daily report
-                      generation into a 5-minute process (Sept 2024).
-                    </p>
-                </div>
-            </div>
-
-            <!-- VEPA AutoCare -->
-            <div class="box">
-                <img class="img" src="website.png" />
-                <div class="titleAndTextCol">
-                    <h2>
-                      <a
-                        target="_blank"
-                        class="new-link"
-                        href="https://vepa-24b46.web.app/"
-                      >
-                        VEPA AutoCare Inventory Website
-                      </a>
-                    </h2>
-                    <p>
-                      Designed a Firebase-based car inventory dashboard with live
-                      filtering, admin-panel editing, dynamic listing cards, and
-                      mobile-first UI (May 2024).
-                    </p>
-                </div>
-            </div>
-
-            <!-- Travel Buddy -->
-            <div class="box">
-                <img class="img" src="website.png" />
-                <div class="titleAndTextCol">
-                    <h2>
-                      <a
-                        target="_blank"
-                        class="new-link"
-                        href="https://github.com/P3rs0nal/ICSI-418-Travel-Buddy"
-                      >
-                        Travel Buddy Website
-                      </a>
-                    </h2>
-                    <p>
-                      Built a React + MongoDB travel planning web app with dynamic trip
-                      searching, saving, and rating tools (May 2024).
-                    </p>
-                </div>
-            </div>
-
-            <!-- Virtual Processor -->
-            <div class="box">
-                <img class="img" src="java.png" />
-                <div class="titleAndTextCol">
-                    <h2>
-                      <a
-                        target="_blank"
-                        class="new-link"
-                        href="https://github.com/P3rs0nal/Virtual-Processor"
-                      >
-                        Virtual Processor
-                      </a>
-                    </h2>
-                    <p>
-                      Constructed a virtual processor in Java simulating a simplified
-                      CPU architecture and instruction set, reinforcing best practices
-                      in OOD and cycle emulation (May 2024).
-                    </p>
-                </div>
-            </div>
-
-            <!-- Professor Pursuit -->
-            <div class="box">
-                <img class="img" src="unity.png" />
-                <div class="titleAndTextCol">
-                    <h2>
-                      <a
-                        target="_blank"
-                        class="new-link"
-                        href="https://github.com/P3rs0nal/Professor-Pursuit"
-                      >
-                        Professor Pursuit (Endless Runner)
-                      </a>
-                    </h2>
-                    <p>
-                      Developed a 3D Unity game for the SUNY Albany 24-Hour Hackathon,
-                      featuring procedural environment generation, character
-                      animations, and collision detection (May 2024).
-                    </p>
-                </div>
-            </div>
-
-            <!-- AWK Compiler & Interpreter -->
-            <div class="box">
-                <img class="img" src="java.png" />
-                <div class="titleAndTextCol">
-                    <h2>
-                      <a
-                        target="_blank"
-                        class="new-link"
-                        href="https://github.com/P3rs0nal/AWKCompilerandInterpreter"
-                      >
-                        AWK Compiler &amp; Interpreter
-                      </a>
-                    </h2>
-                    <p>
-                      Built an AWK compiler/interpreter in Java using Eclipse; performed
-                      lexical analysis (tokenization), recursive descent parsing, and
-                      real-time AST interpretation of pattern-action scripts (Dec 2023).
-                    </p>
+                <div class="skills-block">
+                    <div class="skills-group">
+                        <h4>Languages</h4>
+                        <div class="skill-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">C / C#</span>
+                            <span class="tag">HTML / CSS</span>
+                            <span class="tag">VBA</span>
+                        </div>
+                    </div>
+                    <div class="skills-group">
+                        <h4>Frameworks &amp; Tools</h4>
+                        <div class="skill-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Spring Boot</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Git</span>
+                            <span class="tag">Unity</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <hr
-      style="border: none; border-top: 1px solid rgba(255, 255, 255, 0.2); width: 60%; margin: 40px auto;"
-    />
+    <!-- Projects -->
+    <section id="projects-head" class="section section-alt">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-label"></span>
+                <h2 class="section-title">Projects</h2>
+            </div>
+            <div class="projects-grid">
 
-    <div id="experience" class="projects-head">
-        <h1>Experience</h1>
-    </div>
+                <div class="project-card featured fade-up">
+                    <div class="project-card-top">
+                        <span class="project-badge">Best Project — 1st of 21</span>
+                        <span class="project-date">May 2025</span>
+                    </div>
+                    <h3><a href="https://icsi499-1.onrender.com/dashboard.html" target="_blank" class="project-link">Ora — Personal AI Tech Consultant</a></h3>
+                    <p>Cross-platform AI assistant that joins Google Meet calls, listens and responds in real time using Whisper and GPT, and stores conversation transcripts in Firebase. Features user authentication and Chrome extension integration.</p>
+                    <div class="project-tags">
+                        <span class="tag">GPT</span>
+                        <span class="tag">Whisper</span>
+                        <span class="tag">Firebase</span>
+                        <span class="tag">Chrome Extension</span>
+                    </div>
+                </div>
 
-    <div class="timeline">
-      <!-- VEPA Auto-Care (Co-Owner) -->
-        <div class="timeline-item">
-            <span class="timeline-marker"></span>
-            <div class="timeline-content">
-                <h3>VEPA Auto-Care</h3>
-                <p>
-                  <strong>Co-Owner</strong> — Albany, NY<br />
-                  <span class="date">Sept 2025 – Current</span>
-                </p>
-                <ul>
-                    <li>
-                      Directed business expansion initiatives including remodeling plans and
-                      gas station integration.
-                    </li>
-                    <li>
-                      Negotiated with banks to secure financing partnerships, enabling
-                      customer financing options.
-                    </li>
-                    <li>
-                      Oversaw company-wide operations, balancing business strategy and
-                      technology development.
-                    </li>
-                </ul>
+                <div class="project-card fade-up">
+                    <div class="project-card-top">
+                        <span class="project-date">Feb 2025</span>
+                    </div>
+                    <h3><a href="https://github.com/P3rs0nal" target="_blank" class="project-link">Math AI Tutor</a></h3>
+                    <p>AI-driven math tutoring web app with interactive problem-solving and real-time feedback. Built with Spring Boot, Maven, Firebase, and vanilla JavaScript.</p>
+                    <div class="project-tags">
+                        <span class="tag">Spring Boot</span>
+                        <span class="tag">Firebase</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="project-card fade-up">
+                    <div class="project-card-top">
+                        <span class="project-date">Sept 2024</span>
+                    </div>
+                    <h3><a href="https://github.com/P3rs0nal/Excel-Table-Automation" target="_blank" class="project-link">Excel Data Collection &amp; Automation</a></h3>
+                    <p>VBA macros across multiple linked workbooks that reduced a 2-hour daily reporting process to 5 minutes. Deployed across multiple government divisions at NYS OGS.</p>
+                    <div class="project-tags">
+                        <span class="tag">VBA</span>
+                        <span class="tag">Excel</span>
+                        <span class="tag">Automation</span>
+                    </div>
+                </div>
+
+                <div class="project-card fade-up">
+                    <div class="project-card-top">
+                        <span class="project-date">May 2024</span>
+                    </div>
+                    <h3><a href="https://vepaautocare.com/" target="_blank" class="project-link">VEPA AutoCare Inventory Platform</a></h3>
+                    <p>Firebase-backed car inventory dashboard with live filtering, admin panel, dynamic listing cards, and mobile-first responsive UI. In active production use.</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Firebase</span>
+                        <span class="tag">Firestore</span>
+                    </div>
+                </div>
+
+                <div class="project-card fade-up">
+                    <div class="project-card-top">
+                        <span class="project-date">May 2024</span>
+                    </div>
+                    <h3><a href="https://github.com/P3rs0nal/ICSI-418-Travel-Buddy" target="_blank" class="project-link">Travel Buddy</a></h3>
+                    <p>React + C# + MongoDB travel planner with dynamic destination searching, saving, and rating. Full-stack app with a REST API backend.</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">C#</span>
+                        <span class="tag">MongoDB</span>
+                    </div>
+                </div>
+
+                <div class="project-card fade-up">
+                    <div class="project-card-top">
+                        <span class="project-date">May 2024</span>
+                    </div>
+                    <h3><a href="https://github.com/P3rs0nal/Virtual-Processor" target="_blank" class="project-link">Virtual Processor</a></h3>
+                    <p>Simulated CPU architecture in Java with a full instruction set and cycle emulation. Built with OOP principles and custom memory management.</p>
+                    <div class="project-tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">OOD</span>
+                        <span class="tag">Systems</span>
+                    </div>
+                </div>
+
+                <div class="project-card fade-up">
+                    <div class="project-card-top">
+                        <span class="project-date">May 2024</span>
+                    </div>
+                    <h3><a href="https://github.com/P3rs0nal/Professor-Pursuit" target="_blank" class="project-link">Professor Pursuit — Endless Runner</a></h3>
+                    <p>3D Unity endless runner built in 24 hours for SUNY Albany Hackathon. Procedural environment generation, character animations, and collision detection.</p>
+                    <div class="project-tags">
+                        <span class="tag">Unity</span>
+                        <span class="tag">C#</span>
+                        <span class="tag">Game Dev</span>
+                    </div>
+                </div>
+
+                <div class="project-card fade-up">
+                    <div class="project-card-top">
+                        <span class="project-date">Dec 2023</span>
+                    </div>
+                    <h3><a href="https://github.com/P3rs0nal/AWKCompilerandInterpreter" target="_blank" class="project-link">AWK Compiler &amp; Interpreter</a></h3>
+                    <p>Full AWK compiler/interpreter in Java: lexical analysis, recursive descent parsing, AST construction, and real-time interpretation of pattern-action scripts.</p>
+                    <div class="project-tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">Compilers</span>
+                        <span class="tag">AST</span>
+                    </div>
+                </div>
+
             </div>
         </div>
-        
-        <!-- NYS Office of General Services -->
-        <div class="timeline-item">
-            <span class="timeline-marker"></span>
-            <div class="timeline-content">
-                <h3>NYS Office of General Services – Procurement Services</h3>
-                <p>
-                  <strong>Student Intern</strong> — Albany, NY<br />
-                  <span class="date">Sept 2024 – Sept 2025</span>
-                </p>
-                <ul>
-                    <li>
-                      Designed and deployed automated Excel workbooks (VBA macros) to
-                      collect and consolidate procurement data, cutting manual data-entry
-                      time by 55% and improving reporting accuracy.
-                    </li>
-                    <li>
-                      Integrated macros into daily workflows for multiple divisions,
-                      enabling real-time status updates and reducing errors in quarterly
-                      reports by 30%.
-                    </li>
-                    <li>
-                      Analyzed existing procurement processes; recommended and implemented
-                      process improvements that streamlined contract tracking and yielded
-                      faster turnaround on vendor onboarding.
-                    </li>
-                    <li>
-                      Assisted in preparing and reviewing contracts—coordinated with legal,
-                      finance, and vendor teams to ensure compliance and timely execution.
-                    </li>
-                </ul>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-label"></span>
+                <h2 class="section-title">Experience</h2>
+            </div>
+            <div class="timeline">
+
+                <div class="tl-item fade-up">
+                    <div class="tl-dot"></div>
+                    <div class="tl-body">
+                        <div class="tl-top">
+                            <div>
+                                <h3 class="tl-company">VEPA Auto-Care</h3>
+                                <span class="tl-role">Co-Owner</span>
+                            </div>
+                            <span class="tl-date">Sept 2025 — Current</span>
+                        </div>
+                        <ul>
+                            <li>Manage full daily operations including staffing, workflow, and customer service.</li>
+                            <li>Lead long-term planning: business remodeling, expansion, and exit strategies.</li>
+                            <li>Negotiate with banks for loan and partnership opportunities to expand and offer customer financing.</li>
+                            <li>Oversee online presence — design and deployment of a modern, responsive website.</li>
+                            <li>Implement and maintain cloud-based inventory systems to streamline listings and inquiries.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tl-item fade-up">
+                    <div class="tl-dot"></div>
+                    <div class="tl-body">
+                        <div class="tl-top">
+                            <div>
+                                <h3 class="tl-company">NYS Office of General Services — Procurement</h3>
+                                <span class="tl-role">Student Intern</span>
+                            </div>
+                            <span class="tl-date">Sept 2024 — Sept 2025</span>
+                        </div>
+                        <ul>
+                            <li>Designed and deployed automated Excel workbooks (VBA macros), cutting manual entry time by 55%.</li>
+                            <li>Integrated macros into workflows for multiple divisions, reducing quarterly reporting errors by 30%.</li>
+                            <li>Analyzed procurement processes and implemented improvements that streamlined contract tracking.</li>
+                            <li>Assisted in preparing and reviewing contracts with legal, finance, and vendor teams.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tl-item fade-up">
+                    <div class="tl-dot"></div>
+                    <div class="tl-body">
+                        <div class="tl-top">
+                            <div>
+                                <h3 class="tl-company">SUNY Albany — BITM215</h3>
+                                <span class="tl-role">Teaching Assistant</span>
+                            </div>
+                            <span class="tl-date">Jan 2023 — May 2025</span>
+                        </div>
+                        <ul>
+                            <li>Led weekly lab sessions on advanced Excel functions (pivot tables, VLOOKUP, Power Query) for 100+ students.</li>
+                            <li>Translated IT/IS concepts (CRM, SCM, SQL) into actionable exercises.</li>
+                            <li>Provided one-on-one support for data visualization and e-business/security principles.</li>
+                            <li>Proctored and graded exams; collaborated with faculty on curriculum improvements.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tl-item fade-up">
+                    <div class="tl-dot"></div>
+                    <div class="tl-body">
+                        <div class="tl-top">
+                            <div>
+                                <h3 class="tl-company">VEPA Auto-Care</h3>
+                                <span class="tl-role">Manager</span>
+                            </div>
+                            <span class="tl-date">Mar 2022 — Sept 2025</span>
+                        </div>
+                        <ul>
+                            <li>Implemented upsell strategies driving a 40% increase in monthly revenue.</li>
+                            <li>Managed end-to-end inventory for 200+ vehicle parts, reducing stockouts by 25%.</li>
+                            <li>Created and managed social media campaigns boosting online engagement by 40%.</li>
+                            <li>Built and deployed the responsive inventory platform with React + Firebase Firestore.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tl-item fade-up">
+                    <div class="tl-dot"></div>
+                    <div class="tl-body">
+                        <div class="tl-top">
+                            <div>
+                                <h3 class="tl-company">Shogun Sushi</h3>
+                                <span class="tl-role">Server &amp; Bartender</span>
+                            </div>
+                            <span class="tl-date">Aug 2022 — May 2023</span>
+                        </div>
+                        <ul>
+                            <li>Managed POS transactions for up to 8 tables simultaneously in a fast-paced environment.</li>
+                            <li>Upsold featured cocktails and sake, boosting bar revenue by 15%.</li>
+                            <li>Collaborated with kitchen staff to manage dietary restrictions and special requests.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tl-item fade-up">
+                    <div class="tl-dot"></div>
+                    <div class="tl-body">
+                        <div class="tl-top">
+                            <div>
+                                <h3 class="tl-company">Emack &amp; Bolio's</h3>
+                                <span class="tl-role">Shift Manager</span>
+                            </div>
+                            <span class="tl-date">June 2019 — Sept 2024</span>
+                        </div>
+                        <ul>
+                            <li>Trained and supervised 10+ staff, reducing order errors by 20%.</li>
+                            <li>Conducted weekly inventory audits; implemented POS tracking improvements.</li>
+                            <li>Handled cash reconciliation and end-of-day reporting.</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </div>
+    </section>
 
-        <!-- SUNY Albany TA -->
-        <div class="timeline-item">
-            <span class="timeline-marker"></span>
-            <div class="timeline-content">
-                <h3>SUNY Albany — BITM215</h3>
-                <p>
-                  <strong>Teaching Assistant</strong> — Albany, NY<br />
-                  <span class="date">Jan 2023 – May 2025</span>
-                </p>
-                <ul>
-                    <li>
-                      Led weekly lab sessions on advanced Excel functions (pivot tables,
-                      VLOOKUP, Power Query) to help 100+ students solve real-world business
-                      data analysis problems.
-                    </li>
-                    <li>
-                      Translated complex IT/IS concepts (CRM, SCM, data trends, SQL queries)
-                      into actionable exercises, resulting in a 33% average improvement in
-                      student assessment scores.
-                    </li>
-                    <li>
-                      Provided one-on-one support for data visualization projects, teaching
-                      core e-business and information security principles to non-technical
-                      students.
-                    </li>
-                    <li>
-                      Proctored and graded exams; collaborated with faculty to refine
-                      curriculum and identify areas for supplemental instruction.
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Shogun Sushi -->
-        <div class="timeline-item">
-            <span class="timeline-marker"></span>
-            <div class="timeline-content">
-                <h3>Shogun Sushi</h3>
-                <p>
-                  <strong>Server &amp; Bartender</strong> — Delmar, NY<br />
-                  <span class="date">Aug 2022 – May 2023</span>
-                </p>
-                <ul>
-                    <li>
-                      Delivered high-quality service to diners in a fast-paced sushi
-                      restaurant, balancing front-of-house duties with bar responsibilities
-                      during peak dinner shifts.
-                    </li>
-                    <li>
-                      Managed POS transactions, processed payments, and maintained accurate
-                      tabs for up to 8 tables simultaneously, ensuring timely order delivery
-                      and check accuracy.
-                    </li>
-                    <li>
-                      Prepared and served specialty cocktails and sake, upselling featured
-                      drinks to increase bar revenue by 15%.
-                    </li>
-                    <li>
-                      Collaborated closely with kitchen staff to communicate special requests,
-                      dietary restrictions, and allergy concerns.
-                    </li>
-                    <li>
-                      Assisted in opening/closing procedures, including restocking inventory,
-                      sanitizing workstations, and reconciling daily sales totals.
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- VEPA Auto-Care (Manager) -->
-        <div class="timeline-item">
-            <span class="timeline-marker"></span>
-            <div class="timeline-content">
-                <h3>VEPA Auto-Care</h3>
-                <p>
-                  <strong>Manager</strong> — Albany, NY<br />
-                  <span class="date">Mar 2022 – Sept 2025</span>
-                </p>
-                <ul>
-                    <li>
-                      Implemented customer-centric upsell strategies (bundled maintenance
-                      packages, service add-ons), driving a 40% increase in monthly revenue.
-                    </li>
-                    <li>
-                      Managed end-to-end inventory control: tracked 200+ vehicle parts,
-                      optimized reorder points, and reduced stockouts by 25%.
-                    </li>
-                    <li>
-                      Created and managed social media marketing campaigns (Facebook,
-                      Instagram) that boosted online engagements by 40% and increased new
-                      customer inquiries.
-                    </li>
-                    <li>
-                      Built and deployed VEPA Auto-Care’s responsive online inventory platform
-                      using React and Firebase Firestore—implementing real-time filtering,
-                      dynamic listing cards, and Google Maps integration for dealership
-                      locations.
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Emack & Bolio’s -->
-        <div class="timeline-item">
-            <span class="timeline-marker"></span>
-            <div class="timeline-content">
-                <h3>Emack & Bolio’s</h3>
-                <p>
-                  <strong>Shift Manager</strong> — Albany, NY<br />
-                  <span class="date">June 2019 – Sept 2024</span>
-                </p>
-                <ul>
-                    <li>
-                      Trained and supervised 10+ frontline staff on service standards,
-                      reducing order errors by 20% and improving customer satisfaction
-                      ratings.
-                    </li>
-                    <li>
-                      Conducted weekly inventory audits, reconciling food and supply levels
-                      to minimize waste and maintain optimal stock levels.
-                    </li>
-                    <li>
-                      Handled cash reconciliation, end-of-day reporting, and implemented a
-                      new POS tracking system that improved transaction accuracy.
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
+    <!-- Footer -->
     <footer class="footer">
-        <h2>Let’s Connect</h2>
-        <p>Interested in collaborating or hiring? Feel free to reach out.</p>
-        <div style="margin-top: 10px;">
-            <a class="link" href="mailto:eneazguro02@gmail.com">
-                <img src="gmail.png" alt="Email" height="20" style="vertical-align: middle;" />
-                eneazguro02@gmail.com
-            </a>
-            <br />
-            <a class="link" href="tel:+15188339686">
-                <img src="phone.png" alt="Phone" height="20" style="vertical-align: middle;" />
-                (518) 833-9686
-            </a>
-            <br />
-            <a
-              class="link"
-              target="_blank"
-              href="https://www.linkedin.com/in/enea-zguro/"
-            >
-                <img src="linkedin.png" alt="LinkedIn" height="20" style="vertical-align: middle;" />
-                LinkedIn
-            </a>
+        <div class="footer-inner">
+            <div class="footer-left">
+                <span class="footer-logo">EZ<span class="accent">.</span></span>
+                <p>Albany, NY — Open to opportunities.</p>
+            </div>
+            <div class="footer-links">
+                <a href="mailto:eneazguro02@gmail.com" class="footer-link">eneazguro02@gmail.com</a>
+                <a href="tel:+15188339686" class="footer-link">(518) 833-9686</a>
+                <a href="https://github.com/P3rs0nal" target="_blank" class="footer-link">GitHub</a>
+                <a href="https://www.linkedin.com/in/enea-zguro/" target="_blank" class="footer-link">LinkedIn</a>
+            </div>
         </div>
-        <p style="margin-top: 20px; font-size: 0.9em; color: #aaa;">
-          © 2025 Enea Zguro. All rights reserved.
-        </p>
+        <div class="footer-bottom">
+            <span>© 2025 Enea Zguro. All rights reserved.</span>
+        </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="code.js"></script>
-    <script>
-        gsap.from(".box", {
-            opacity: 0,
-            y: 30,
-            stagger: 0.1,
-            duration: 0.6
-        });
-    </script>
+
 </body>
 </html>
